@@ -10,7 +10,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.support.rowset.SqlRowSet;
 import org.springframework.stereotype.Component;
 
-import com.techelevator.npgeek.Survey;
+import com.techelevator.npgeek.Objects.Survey;
 
 @Component
 public class JdbcSurveyDao implements com.techelevator.npgeek.DAOs.SurveyDao{
@@ -25,7 +25,7 @@ public class JdbcSurveyDao implements com.techelevator.npgeek.DAOs.SurveyDao{
 	@Override
 	public List<Survey> getAllSurveys() {
 		List<Survey> allSurveys = new ArrayList<>();
-		String sqlSelectAllSurveys = "SELECT * FROM SURVEY";
+		String sqlSelectAllSurveys = "SELECT * FROM survey_result";
 		SqlRowSet results = jdbcTemplate.queryForRowSet(sqlSelectAllSurveys);
 		while(results.next()) {
 			allSurveys.add(mapRowToSurvey(results));
@@ -35,7 +35,7 @@ public class JdbcSurveyDao implements com.techelevator.npgeek.DAOs.SurveyDao{
 	
 	public Survey getSurveyById(int surveyId) {
 		Survey survey = null;
-		String sqlSelectSurveyById = "SELECT * FROM survey WHERE surveyId = ?";
+		String sqlSelectSurveyById = "SELECT * FROM survey_result WHERE surveyId = ?";
 		SqlRowSet results = jdbcTemplate.queryForRowSet(sqlSelectSurveyById, surveyId);
 		if(results.next()) {
 			survey = mapRowToSurvey(results);

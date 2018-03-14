@@ -34,15 +34,8 @@ public void setState(String state) {
 public String getActivityLevel() {
 	return activityLevel;
 }
-public void setActivitylevel(String activityLevel) {
+public void setActivityLevel(String activityLevel) {
 	this.activityLevel = activityLevel;
 }
-	
-	
-//	surveyId INTEGER PRIMARY KEY DEFAULT NEXTVAL('seq_surveyId'),
-//	parkCode VARCHAR(10) NOT NULL,
-//	emailAddress VARCHAR(100) NOT NULL,
-//	state VARCHAR(30) NOT NULL,
-//	activityLevel VARCHAR(100) NOT NULL
-	
+
 }

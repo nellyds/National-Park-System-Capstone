@@ -4,7 +4,9 @@
     pageEncoding="UTF-8"%>
 <c:import url="/WEB-INF/jsp/common/header.jsp" />
 
-
+<c:forEach var="survey" items="${surveys }">
+<c:out value="${survey.parkCode }" />
+</c:forEach>
 
     
 

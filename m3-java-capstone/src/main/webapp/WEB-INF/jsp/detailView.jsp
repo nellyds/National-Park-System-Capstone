@@ -11,7 +11,9 @@
 			<div class="highlows">
 			<div><c:out value="${weather.high }     ${weather.low }"/></div>
 			<div><c:out value="high     low" /></div>
-				
+			<c:url var="imgurl" value="/img/weather/${weather.image(weather.forecast) }.png" />
+			
+			<img src="${imgurl}" />				
 			</div>
 			<div>
 			
@@ -24,14 +26,15 @@
 </c:forEach>
 
 <c:url var="formAction" value="/detailView" />
-<form method ="GET" action="${formAction }">
 
+<form method ="POST" action="${formAction }">
+<input type="hidden" name="param.parkCode" value="${param.parkCode}">
+
+<input type="submit" value="Click to Change temp type"/>
 </form>
 
 <button></button>
+<c:out value="${tempPreference.celsius}"/>
 
-
-
-    
 
 <c:import url="/WEB-INF/jsp/common/footer.jsp" />

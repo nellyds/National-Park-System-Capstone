@@ -38,14 +38,14 @@ public class Weather {
 	public void setForecast(String forecast) {
 	    this.forecast = forecast;
 	}
-	public String image() {
+	public String image(String forecast) {
 		if(forecast.equals("snow")) {
 			return "snow";
 		}
 		if(forecast.equals("rain")) {
 			return "rain";
 		}
-		if(forecast.equals("partly Cloudy")) {
+		if(forecast.equals("partly cloudy")) {
 			return "partlyCloudy";
 		}
 		if(forecast.equals("thunderstorms")) {

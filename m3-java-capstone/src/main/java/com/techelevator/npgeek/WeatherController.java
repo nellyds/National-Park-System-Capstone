@@ -1,21 +1,20 @@
 package com.techelevator.npgeek;
 
+import java.util.List;
+
+import javax.servlet.http.HttpSession;
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-
-	import java.util.List;
-
-	import org.springframework.beans.factory.annotation.Autowired;
-	import org.springframework.stereotype.Controller;
-	import org.springframework.ui.ModelMap;
-	import org.springframework.web.bind.annotation.ModelAttribute;
-	import org.springframework.web.bind.annotation.PathVariable;
-	import org.springframework.web.bind.annotation.RequestMapping;
-	import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.techelevator.npgeek.DAOs.ParkDao;
 import com.techelevator.npgeek.DAOs.WeatherDao;
 import com.techelevator.npgeek.Objects.Park;
+import com.techelevator.npgeek.Objects.UserPreference;
 
 
 
@@ -38,9 +37,18 @@ import com.techelevator.npgeek.Objects.Park;
 	@RequestMapping(path="/detailView", method=RequestMethod.GET)
 	public String displayAddForm(@RequestParam String parkCode, ModelMap modelHolder) {
 	    modelHolder.put("fiveDayForecast", weatherDao.getWeatherForPark(parkCode));
+	    	
+	    
 		return "detailView";
 	}
 
+	@RequestMapping(path="/detailView", method=RequestMethod.POST)
+	public String displayAddForm( ModelMap modelHolder , HttpSession session,UserPreference userPreference) {
+	    	
+	    	session.setAttribute("tempPreference", userPreference);
+		return "redirect:/detailView";
+	}
+	
 	
 	
 

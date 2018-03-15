@@ -37,6 +37,7 @@ import com.techelevator.npgeek.Objects.UserPreference;
 	@RequestMapping(path="/detailView", method=RequestMethod.GET)
 	public String displayAddForm(@RequestParam String parkCode, ModelMap modelHolder) {
 	    modelHolder.put("fiveDayForecast", weatherDao.getWeatherForPark(parkCode));
+	    
 	    	
 	    
 		return "detailView";

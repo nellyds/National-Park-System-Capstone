@@ -4,6 +4,7 @@
 	font-size:2.3em;
 	background-color:rgba(5,0,0,.8);
 	width: 100%;
+	padding: 1em;
 }
 
 .image_container{
@@ -17,9 +18,29 @@
 	border: 2px solid rgba(230,230,230,1);
 	border-radius: 2em 0em 2em 0em;
 	filter: saturate(30%);
-	opacity: .7;
-	
+	opacity: .7;	
 }
+
+.weather_image{
+	width: 70%;
+	height: auto;
+	opacity: .8;
+}
+
+.weather_image:hover{
+	opacity:1;
+}
+.forecast{
+
+	display:inline-block;
+	border: 4px solid white;
+	background-color:rgba(0,0,20,.8);
+	width: 15%;
+	margin-top: 10px;
+	border-radius: 2em 0em 2em 0em;
+	padding: 10px;	
+}
+
 
 .park_view:hover{
 	transform: scale(1.1);
@@ -29,16 +50,19 @@
 	opacity: 1;
 }
 .park{
+	margin-left: 30%;
 	display:inline-block;
 	border: 4px solid white;
 	background-color:rgba(0,0,20,.8);
 	width: 45%;
-	margin-top: 5em;
+	margin-top: 10px;
 	border-radius: 2em 0em 2em 0em;
+	padding: 10px;
 }
 
 .park_text{
 	text-align: center;
+	font-size: 1em;
 }
 
 body {
@@ -56,7 +80,11 @@ body {
   flex-direction: column;
   
 }
-
+.park_link:hover{
+	
+	text-shadow: 1px 1px;
+	transition: .2s;
+}
 .underline{
 	height: .6em;
 	width: 30%;

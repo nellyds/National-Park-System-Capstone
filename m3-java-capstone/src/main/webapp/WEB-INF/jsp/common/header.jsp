@@ -18,7 +18,16 @@
 <script src="${jqs}"></script>
 <script src="${jq }"></script>
 </head>
+<style>
+body{
+background-image: url(https://images.freecreatives.com/wp-content/uploads/2015/03/Huge-Backgrounds-2-1024x683.jpg);
+background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 
+}
+</style>
 <body>
 <div class="Header">
 <h1 class="title">National Park Service</h1>

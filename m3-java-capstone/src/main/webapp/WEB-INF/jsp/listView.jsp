@@ -14,11 +14,13 @@
 </c:url>
 <div class="park">
 <div class="image_container">
-<a href="${parkDetailUrl }"><img src="${ imgurl}" /></a>
+<a href="${parkDetailUrl }"><img class="park_view" src="${ imgurl}" /></a>
 </div>
 <div class="park_text">
 <h1><c:out value="${park.parkName }"/></h1>
+<div class="underline"></div>
 <h2><c:out value="${park.state }"/></h2>
+<div class="underline_two"></div>
 <h4><c:out value="${park.parkDescription }"/></h4>
 
 </div>

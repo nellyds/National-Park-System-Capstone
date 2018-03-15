@@ -6,7 +6,7 @@ public class Weather {
 	private Integer low;
 	private Integer high;
 	private String forecast;
-
+	
 
 	public String getParkCode() {
 	    return parkCode;
@@ -38,9 +38,28 @@ public class Weather {
 	public void setForecast(String forecast) {
 	    this.forecast = forecast;
 	}
-
-
-
+	public String image() {
+		if(forecast.equals("snow")) {
+			return "snow";
+		}
+		if(forecast.equals("rain")) {
+			return "rain";
+		}
+		if(forecast.equals("partly Cloudy")) {
+			return "partlyCloudy";
+		}
+		if(forecast.equals("thunderstorms")) {
+		return "thunderstorms";	
+		}
+		if(forecast.equals("sunny")) {
+			return "sunny";
+		}
+		if(forecast.equals("cloudy")) {
+			return "cloudy";
+			}
+		return null;
+		}
+	
 	public String forecastMessage() {
 	    if(forecast.equals("snow")) {
 	        return "pack snowshoes";

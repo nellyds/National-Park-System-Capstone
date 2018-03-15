@@ -1,0 +1,29 @@
+.title{
+	font-family: "Rammetto One";
+	color: white; 
+	font-size:2.3em;
+	background-color:rgba(5,130,5,.8);
+}
+
+.image_container{
+	
+}
+
+.park{
+	display:inline-block;
+	border: 4px solid white;
+}
+
+.park_text{
+	text-align: center;
+}
+
+body {
+   background-image: url("/img/background.jpg");
+ 
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+}

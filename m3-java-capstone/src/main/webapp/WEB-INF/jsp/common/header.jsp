@@ -7,17 +7,25 @@
     <title>National Park System</title>
     <c:url value="/CSS/style.css" var="cssHref" />
     <link rel="stylesheet" href="${cssHref}">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <c:url var="font" value="https://fonts.googleapis.com/css?family=IBM+Plex+Mono|Nunito|Rammetto+One" />
+    <link href="${font}" rel="stylesheet">
+   <c:url var="jqs" value="https://code.jquery.com/jquery-3.2.1.slim.min.js" />
+    <c:url var="jq" value="ps://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" />
+	<c:url var="boot" value="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" />
+
+<script src="${boot }"></script>
+<link href="${boot }" rel="/stylesheet">
+<script src="${jqs}"></script>
+<script src="${jq }"></script>
 </head>
 
 <body>
 <div class="Header">
-National Park Service
+<h1 class="title">National Park Service</h1>
 </div>
-<div class="nav-bar">
+<div class="navbar-toggler" id="navbarSupportedContent">
 <ul>
-	<li>Home</li>
-	<li>Survey</li>
+	<a href="/listView"><li>Home</li></a>
+	<a href="/surveyInput"><li >Survey</li></a>
 </ul>
 </div>

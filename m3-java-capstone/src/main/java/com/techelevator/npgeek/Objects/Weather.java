@@ -90,4 +90,14 @@ public class Weather {
 	    return null;
 	    
 	}
+	
+public Double highFtoC(Integer high){
+		
+		return ((high.doubleValue()-32)*1.8);
+	
+	}
+	public Double lowFtoC(Integer low){
+		
+		return ((low.doubleValue()-32)*1.8);
+	}
 }

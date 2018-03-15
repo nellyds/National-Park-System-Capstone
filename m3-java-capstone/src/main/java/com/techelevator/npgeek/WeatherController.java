@@ -43,9 +43,20 @@ import com.techelevator.npgeek.Objects.UserPreference;
 	}
 
 	@RequestMapping(path="/detailView", method=RequestMethod.POST)
-	public String displayAddForm( ModelMap modelHolder , HttpSession session,UserPreference userPreference) {
+	public String displayAddForm( @RequestParam String isCelsius, @RequestParam String parkCode,ModelMap modelHolder , HttpSession session) {
 	    	
-	    	session.setAttribute("tempPreference", userPreference);
+		 boolean tempType = false;
+		if(isCelsius.equals("false")) {
+			tempType = false;
+		} else if(isCelsius.equals("true")) {
+			tempType = true;
+
+		}
+		
+		session.setAttribute("tempType",tempType);
+		
+		modelHolder.put("parkCode", parkCode);
+
 		return "redirect:/detailView";
 	}
 	

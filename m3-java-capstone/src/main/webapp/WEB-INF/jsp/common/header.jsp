@@ -31,10 +31,8 @@ background-attachment: fixed;
 <body>
 <div class="Header">
 <h1 class="title">National Park Service</h1>
-</div>
-<div class="navbar-toggler" id="navbarSupportedContent">
-<ul>
-	<a href="/listView"><li>Home</li></a>
-	<a href="/surveyInput"><li >Survey</li></a>
-</ul>
+
+
+
+
 </div>

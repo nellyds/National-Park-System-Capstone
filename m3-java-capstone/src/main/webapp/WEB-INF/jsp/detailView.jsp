@@ -3,10 +3,15 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <c:import url="/WEB-INF/jsp/common/header.jsp" />
+<div class="park_detail">
 <c:url var="imgurl" value="/img/parks/${park.toLowerCase(param.parkCode)}.jpg" />
 <img src="${imgurl}" />
-<h2><c:out value="${param.parkCode }" /></h2>
 
+
+
+<h2><c:out value="${param.parkCode }" /></h2>
+</div>
+<div class="flex-container_forecast" >
 <c:forEach var="weather" items="${fiveDayForecast }">
 	
 	<div class="forecast">
@@ -37,7 +42,7 @@
 
 	</div>
 </c:forEach>
-
+</div>
 	<c:out value="${tempType}" />
 
 

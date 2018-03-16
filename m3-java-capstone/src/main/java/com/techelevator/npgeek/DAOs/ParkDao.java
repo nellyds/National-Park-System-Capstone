@@ -6,7 +6,7 @@ import com.techelevator.npgeek.Objects.Park;
 
 public interface ParkDao {
 	
-	public Park getParkByCode(int parkCode);
+	public Park getParkByCode(String parkCode);
 	
 	public List<Park> getAllParks();
 }

@@ -53,10 +53,9 @@ import com.techelevator.npgeek.Objects.UserPreference;
 			tempType = true;
 
 		}
-		
+		modelHolder.put("park", parkDao.getParkByCode(parkCode));
 		session.setAttribute("tempType",tempType);
 		
-		modelHolder.put("parkCode", parkCode);
 
 		return "redirect:/detailView";
 	}

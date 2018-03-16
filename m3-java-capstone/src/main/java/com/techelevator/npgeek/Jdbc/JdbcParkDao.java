@@ -70,7 +70,7 @@ public class JdbcParkDao implements ParkDao{
 	}
 
 	@Override
-	public Park getParkByCode(int parkCode) {
+	public Park getParkByCode(String parkCode) {
 		Park park = null;
 		String sqlSelectParkByCode = "SELECT * FROM survey WHERE parkCode = ?";
 		SqlRowSet results = jdbcTemplate.queryForRowSet(sqlSelectParkByCode, parkCode);

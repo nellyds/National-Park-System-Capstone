@@ -2,9 +2,11 @@
 	font-family: "Rammetto One";
 	color: white; 
 	font-size:2.3em;
-	background-color:rgba(5,0,0,.8);
+	background-color:rgba(5,0,0,1);
 	width: 100%;
 	padding: 1em;
+	position: fixed;
+	z-index: 100;
 }
 
 .image_container{
@@ -24,7 +26,7 @@
 .weather_image{
 	width: 70%;
 	height: auto;
-	opacity: .8;
+	opacity: .5;
 }
 
 .weather_image:hover{
@@ -41,6 +43,15 @@
 	padding: 10px;	
 }
 
+.forecast:hover{
+	transform: scale(1.4);
+	transition: transform .2s;
+}
+.flex-container_forecast {
+  display: flex;
+  flex-wrap: nowrap;
+  
+}
 
 .park_view:hover{
 	transform: scale(1.1);
@@ -104,4 +115,8 @@ a{
 }
 li{
 	display: inline;
+}
+.header{
+	position: fixed;
+	z-index: 100;
 }

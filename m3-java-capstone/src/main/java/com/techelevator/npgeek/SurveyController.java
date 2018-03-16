@@ -30,7 +30,12 @@ public class SurveyController {
 
 	 modelHolder.put("surveys", surveys);
 
-	 return "/surveyInput";
+	 return "redirect:/surveyResult";
+	}
+	
+	@RequestMapping(path="/surveyResult", method=RequestMethod.GET)
+	public String displaySurvey() {
+		return "surveyResult";
 	}
 
 }

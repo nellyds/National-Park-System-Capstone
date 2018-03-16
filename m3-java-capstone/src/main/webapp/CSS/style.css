@@ -224,4 +224,7 @@ p{
 	margin-left:20%;
 	padding:10px;
 }
-
+.bar{
+	height: 50px;
+	background-color: white;
+}

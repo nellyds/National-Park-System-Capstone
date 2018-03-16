@@ -5,11 +5,11 @@
 <c:import url="/WEB-INF/jsp/common/header.jsp" />
 
 <c:url var="formAction" value="/surveyResult" />
+<div class="surveyContainer">
 
 <form method="POST" action="${formAction}">
-
 <!-- Drop-down list of parks -->
-			<label for="parkCode"> Select Your Favorite Park</label> <select name="parkCode"
+			<div><label for="parkCode"> Select Your Favorite Park</label> <select name="parkCode"
 				id="parkCode">
 				<option value="0">Select</option>
 				<option value="CVNP">Cuyahoga Valley National Park</option>
@@ -23,8 +23,10 @@
 				<option value="YNP2">Yosemite National Park</option>
 				<option value="RMNP">Rocky Mountain National Park</option>
 			</select>
-	
+	</div>
 <!-- Drop-down list of states -->
+
+<div>
 			<label for="state"> Select your State</label> <select name="state"
 				id="state">
 				<option value="0">Select</option>
@@ -80,8 +82,9 @@
 				<option value="WI">Wisconsin</option>
 				<option value="WY">Wyoming</option>
 			</select>
-
+</div>
 <!-- Drop-down list of parks -->
+<div>
 			<label for="activityLevel">Select Your Average Activity Level</label> <select name="activityLevel"
 				id="activityLevel">
 				<option value="0">Select</option>
@@ -90,14 +93,14 @@
 				<option value="active">Active</option>
 				<option value="extremely active">Extremely Active</option>
 			</select>
-	
+</div>
 <!-- Text input -->
-		
+<div>	
 			<label for="emailAddress">Email Address</label>
 			<input type="text" name="emailAddress" id="emailAddress" />
-	
+</div>	
 <!-- Submit Button -->
 			<input type="submit" value="Submit Survey"/>
 	</form>
-
+</div>
 <c:import url="/WEB-INF/jsp/common/footer.jsp" />

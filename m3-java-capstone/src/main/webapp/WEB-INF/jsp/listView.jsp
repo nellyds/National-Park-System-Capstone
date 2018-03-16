@@ -17,7 +17,7 @@
 <a href="${parkDetailUrl }"><img class="park_view" src="${ imgurl}" /></a>
 </div>
 <div class="park_text">
-<h1 class=""><c:out value="${park.parkName }"/></h1>
+<h1><c:out value="${park.parkName }"/></h1>
 <div class="underline"></div>
 <h2><c:out value="${park.state }"/></h2>
 <div class="underline_two"></div>

@@ -36,7 +36,7 @@
 	display:inline-block;
 	border: 4px solid white;
 	background-color:rgba(0,0,20,.8);
-	width: 15%;
+	width: 20%;
 	margin-top: 10px;
 	border-radius: 2em 0em 2em 0em;
 	padding: 10px;	
@@ -49,6 +49,8 @@
 .flex-container_forecast {
   display: flex;
   flex-wrap: nowrap;
+  width:70%;
+  margin:auto;
   
 }
 
@@ -109,12 +111,111 @@ body {
 	border-radius: 2px;
 	margin: auto;
 }
-a{
-	style: none;
+.underline_three{
+	height: .2em;
+	width: 20%;
+	background-color: white;
+	border-radius: 2px;
+	margin: auto;
+}
+
+a:visited{
+	text-decoration: none;
+	color: white;
+}
+a:link{
+	text-decoration: none;
+	color: white;
 }
 li{
 	display: inline;
+	padding: 5px;
 }
 .header{
 	z-index: 100;
+	position: fixed;
+}
+.header_nav{
+	font-size: 1em;
+	font-family: "Nunito";
+	background: rgba(0,0,0,1);
+	color:white;
+	width: 20%;
+	padding: 10px;
+	border: 2px solid white;
+}
+
+p{
+	text-align:center;
+	
+}
+
+.park_name{
+	text-align:center;
+}
+
+.detail_container{
+	width:70%;
+	margin:auto;
+	background-color:rgba(0,0,20,.85);
+	border:3px solid white;
+	border-radius:3em 0em 3em 0em;
+	padding:3%;
+	
+}
+
+.detail_image{
+	border-radius:2em 0em 2em 0em;
+	margin:auto;
+	width:40%;
+}
+.image_class_detail{
+	height:100%;
+	width:100%;
+	filter:blur(50px);
+	filter:saturate(.5);
+	border-radius:2em 0em 2em 0em;
+	border:4px solid white;
+	
+}
+
+.image_class_detail:hover{
+	filter:saturate(1);
+	transition:.5s;
+	transform:scale(1.2);
+}
+.surveyForm{
+	margin:auto;
+}
+
+.forecastHigh{
+	text-align:left;
+	padding:5px;
+	
+}
+
+.forecastLow{
+	
+	content-align:right;
+}
+
+.quote{
+	font-size: 1.2em;
+}
+
+.surveyContainer{
+	border: 3px solid white;
+	border-radius: 3em 0em 3em 0em;
+	background-color: rgba(0,0,20,.80);
+	width:30%;
+	 margin:auto;
+	 padding:15px;
+	
+}
+
+.surveyContainer:div{
+	margin:auto;
+	margin-left:20%;
+	padding:10px;
+	
 }

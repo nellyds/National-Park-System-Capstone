@@ -76,7 +76,7 @@ public class Weather {
 	    return null;
 	    
 	}
-	public String tempMessage() {
+	public String tempMessage(Integer low, Integer high) {
 	    if((high-low)>20) {
 	        return "wear breathable layers";
 	    }

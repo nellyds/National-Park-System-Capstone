@@ -25,7 +25,7 @@ public JdbcWeatherDao(DataSource dataSource) {
 
 @Override
 public List<Weather> getWeatherForPark(String parkCode) {
-    String getWeatherSql = "select * from weather where parkCode = ? order by fivedayforecastvalue asc";
+    String getWeatherSql = "select * from weather where parkCode = ? order by fivedayforecastvalue asc ";
 
     List<Weather> weatherList = new ArrayList<>();
     SqlRowSet results = jdbcTemplate.queryForRowSet(getWeatherSql,parkCode);

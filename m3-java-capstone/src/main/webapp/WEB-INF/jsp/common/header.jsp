@@ -31,6 +31,14 @@ background-attachment: fixed;
 <body>
 <div class="Header">
 <h1 class="title">National Park Service</h1>
+<h4><c:url var="homeUrl" value="listView" /> 
+<ul class="header_nav">
+			<c:url var="listViewUrl" value="/" />
+			<li><a href="${listViewUrl}">Home</a></li>
+			<c:url var="surveyInputUrl" value="/surveyInput" />
+			<li><a href="${surveyInputUrl}">Survey</a></li>
+			
+		</ul>
 
 
 

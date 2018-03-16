@@ -9,7 +9,7 @@
 
 <form method="POST" action="${formAction}">
 <!-- Drop-down list of parks -->
-			<div><label for="parkCode"> Select Your Favorite Park</label> <select name="parkCode"
+			<div class="favorite"><label for="parkCode"> Select Your Favorite Park</label> <select name="parkCode"
 				id="parkCode">
 				<option value="0">Select</option>
 				<option value="CVNP">Cuyahoga Valley National Park</option>
@@ -26,7 +26,7 @@
 	</div>
 <!-- Drop-down list of states -->
 
-<div>
+<div class="favorite">
 			<label for="state"> Select your State</label> <select name="state"
 				id="state">
 				<option value="0">Select</option>
@@ -84,7 +84,7 @@
 			</select>
 </div>
 <!-- Drop-down list of parks -->
-<div>
+<div class="favorite">
 			<label for="activityLevel">Select Your Average Activity Level</label> <select name="activityLevel"
 				id="activityLevel">
 				<option value="0">Select</option>
@@ -95,12 +95,15 @@
 			</select>
 </div>
 <!-- Text input -->
-<div>	
+<div class="favorite">
 			<label for="emailAddress">Email Address</label>
 			<input type="text" name="emailAddress" id="emailAddress" />
 </div>	
 <!-- Submit Button -->
+<div class="favorite">
+
 			<input type="submit" value="Submit Survey"/>
+</div>
 	</form>
 </div>
 <c:import url="/WEB-INF/jsp/common/footer.jsp" />

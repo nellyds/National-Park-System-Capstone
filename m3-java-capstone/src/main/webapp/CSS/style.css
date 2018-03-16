@@ -207,7 +207,7 @@ p{
 	border: 3px solid white;
 	border-radius: 3em 0em 3em 0em;
 	background-color: rgba(0,0,20,.80);
-	width:30%;
+	width:45%;
 	 margin:auto;
 	 padding:15px;
 	
@@ -219,3 +219,9 @@ p{
 	padding:10px;
 	
 }
+
+.favorite{
+	margin-left:20%;
+	padding:10px;
+}
+

@@ -2,6 +2,7 @@ package com.techelevator.npgeek.DAOs;
 
 import java.util.List;
 
+import com.techelevator.npgeek.Objects.Park;
 import com.techelevator.npgeek.Objects.Survey;
 
 public interface SurveyDao {
@@ -11,4 +12,5 @@ public interface SurveyDao {
 	public List<Survey> getAllSurveys();
 
 	void addSurvey(Survey survey);
+	
 }

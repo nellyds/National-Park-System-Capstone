@@ -68,6 +68,32 @@ public class JdbcParkDao implements ParkDao{
 		
 		
 	}
+	
+
+private Park mapRowToParkReviews(SqlRowSet row) {
+	Park park = new Park();
+	park.setParkCode(row.getString("parkCode"));
+	park.setParkName(row.getString("parkName")); 
+	park.setState(row.getString("state"));
+	park.setAnnualVisitorCount(row.getInt("annualVisitorCount"));
+	park.setElevationInFeet(row.getInt("elevationInFeet"));
+	park.setClimate(row.getString("climate"));
+	park.setNumberOfCampSites(row.getInt("numberOfCampSites"));
+	park.setMilesOfTrail(row.getDouble("milesOfTrail"));
+	park.setInspirationalQuote(row.getString("inspirationalQuote"));
+	park.setQuoteSource(row.getString("inspirationalQuoteSource"));
+	park.setParkDescription(row.getString("parkDescription"));
+	park.setEntryFree(row.getInt("entryFee"));
+	park.setNumberOfSpecies(row.getInt("numberOfAnimalSpecies"));
+	park.setAmountOfSurveys(row.getInt("amount_of_surveys"));
+	
+	
+	park.setAcreage(row.getInt("acreage"));
+	park.setYearFounded(row.getInt("yearFounded"));
+	return park;
+	
+	
+}
 
 	@Override
 	public Park getParkByCode(String parkCode) {
@@ -80,6 +106,26 @@ public class JdbcParkDao implements ParkDao{
 		return park;
 	}
 
+	
+	
+	@Override
+	public List<Park> getParksBySurveyRank() {
+		List<Park> parkRankingList = new ArrayList<>();
+		String sqlSelectParkByAmountOfReviews = 
+		
+		 "select count(survey_result.parkcode) as amount_of_surveys,park.* "+
+		 "from survey_result " +
+		 "join park on park.parkcode = survey_result.parkcode " +
+		 "group by park.parkcode " +
+		 "order by amount_of_surveys desc";
+		
+		
+		SqlRowSet results = jdbcTemplate.queryForRowSet(sqlSelectParkByAmountOfReviews);
+		while(results.next()) {
+			parkRankingList.add(mapRowToParkReviews(results));
+		}
+		return parkRankingList;
+	}
 
 
 	

@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+import com.techelevator.npgeek.DAOs.ParkDao;
 import com.techelevator.npgeek.DAOs.SurveyDao;
 import com.techelevator.npgeek.Objects.Survey;
 
@@ -16,6 +17,8 @@ public class SurveyController {
 
 	@Autowired
 	SurveyDao surveyDao;
+	@Autowired
+	ParkDao parkDao;
 	@RequestMapping(path="/surveyInput", method=RequestMethod.GET)
 	public String displaySurvery() {
 		return "surveyInput";
@@ -34,7 +37,9 @@ public class SurveyController {
 	}
 	
 	@RequestMapping(path="/surveyResult", method=RequestMethod.GET)
-	public String displaySurvey() {
+	public String displaySurvey(ModelMap modelHolder) {
+		modelHolder.put("parks",parkDao.getParksBySurveyRank());
+
 		return "surveyResult";
 	}
 

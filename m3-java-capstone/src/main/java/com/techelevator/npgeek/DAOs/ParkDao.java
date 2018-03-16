@@ -9,6 +9,8 @@ public interface ParkDao {
 	public Park getParkByCode(String parkCode);
 	
 	public List<Park> getAllParks();
+
+	public List<Park> getParksBySurveyRank();
 }
 
 

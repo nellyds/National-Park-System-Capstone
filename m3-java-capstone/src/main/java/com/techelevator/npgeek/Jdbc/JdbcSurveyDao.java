@@ -10,6 +10,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.support.rowset.SqlRowSet;
 import org.springframework.stereotype.Component;
 
+import com.techelevator.npgeek.Objects.Park;
 import com.techelevator.npgeek.Objects.Survey;
 
 @Component
@@ -49,6 +50,8 @@ public class JdbcSurveyDao implements com.techelevator.npgeek.DAOs.SurveyDao{
 	}
 
 	
+	
+	
 
 	private Survey mapRowToSurvey(SqlRowSet row) {
 		Survey survey = new Survey();
@@ -72,6 +75,8 @@ public class JdbcSurveyDao implements com.techelevator.npgeek.DAOs.SurveyDao{
 		}
 		return survey;
 	}
+
+	
 }
 
 

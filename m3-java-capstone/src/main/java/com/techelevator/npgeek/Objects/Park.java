@@ -17,6 +17,7 @@ public class Park {
 	private String parkDescription;
 	private int entryFree;
 	private int numberOfSpecies;
+	private int amountOfSurveys;
 	public String getParkCode() {
 		return parkCode;
 	}
@@ -110,6 +111,14 @@ public class Park {
 	}
 	public void setNumberOfSpecies(int numberOfSpecies) {
 		this.numberOfSpecies = numberOfSpecies;
+	}
+
+	public int getAmountOfSurveys() {
+		return amountOfSurveys;
+	}
+
+	public void setAmountOfSurveys(int amountOfSurveys) {
+		this.amountOfSurveys = amountOfSurveys;
 	}
 	
 //	parkCode VARCHAR(10) PRIMARY KEY,

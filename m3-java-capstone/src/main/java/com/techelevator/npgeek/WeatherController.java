@@ -36,7 +36,8 @@ import com.techelevator.npgeek.Objects.Park;
 	@RequestMapping(path="/detailView", method=RequestMethod.GET)
 	public String displayAddForm(@RequestParam String parkCode, ModelMap modelHolder) {
 	    modelHolder.put("fiveDayForecast", weatherDao.getWeatherForPark(parkCode));
-	    
+		modelHolder.put("park", parkDao.getParkByCode(parkCode));
+
 	    	
 	    
 		return "detailView";
@@ -52,8 +53,9 @@ import com.techelevator.npgeek.Objects.Park;
 			tempType = true;
 
 		}
-		modelHolder.put("park", parkDao.getParkByCode(parkCode));
+		modelHolder.put("parkCode", parkCode);
 		session.setAttribute("tempType",tempType);
+
 		
 
 		return "redirect:/detailView";

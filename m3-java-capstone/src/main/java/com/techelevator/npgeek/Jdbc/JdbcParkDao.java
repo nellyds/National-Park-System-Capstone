@@ -36,15 +36,15 @@ public class JdbcParkDao implements ParkDao{
 		return allParks;
 	}
 	
-	public Park getParkById(int parkCode) {
-		Park park = null;
-		String sqlSelectParkByCode = "SELECT * FROM survey WHERE parkCode = ?";
-		SqlRowSet results = jdbcTemplate.queryForRowSet(sqlSelectParkByCode, parkCode);
-		if(results.next()) {
-			park = mapRowToPark(results);
-		}
-		return park;
-	}
+//	public Park getParkById(int parkCode) {
+//		Park park = null;
+//		String sqlSelectParkByCode = "SELECT * FROM survey WHERE parkCode = ?";
+//		SqlRowSet results = jdbcTemplate.queryForRowSet(sqlSelectParkByCode, parkCode);
+//		if(results.next()) {
+//			park = mapRowToPark(results);
+//		}
+//		return park;
+//	}
 	private Park mapRowToPark(SqlRowSet row) {
 		Park park = new Park();
 		park.setParkCode(row.getString("parkCode"));
@@ -72,7 +72,7 @@ public class JdbcParkDao implements ParkDao{
 	@Override
 	public Park getParkByCode(String parkCode) {
 		Park park = null;
-		String sqlSelectParkByCode = "SELECT * FROM survey WHERE parkCode = ?";
+		String sqlSelectParkByCode = "SELECT * FROM park WHERE parkCode = ?";
 		SqlRowSet results = jdbcTemplate.queryForRowSet(sqlSelectParkByCode, parkCode);
 		if(results.next()) {
 			park = mapRowToPark(results);

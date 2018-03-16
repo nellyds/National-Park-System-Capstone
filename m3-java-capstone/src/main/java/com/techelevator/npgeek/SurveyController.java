@@ -22,11 +22,11 @@ public class SurveyController {
 	}
 
 	@RequestMapping(path="/surveyResult", method=RequestMethod.POST)
-	public String showSurveyResult(ModelAttribute survey, ModelMap modelHolder) {
+	public String showSurveyResult(@ModelAttribute Survey survey, ModelMap modelHolder) {
 		
 	List<Survey> surveys = surveyDao.getAllSurveys();
 	
-	surveyDao.addSurvey((Survey) survey);
+	surveyDao.addSurvey(survey);
 
 	 modelHolder.put("surveys", surveys);
 

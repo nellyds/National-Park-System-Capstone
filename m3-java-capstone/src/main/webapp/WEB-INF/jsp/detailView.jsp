@@ -21,11 +21,13 @@
 				<c:out value="${weather.high }F     ${weather.low }F" />
 				</c:if>
 				<c:if test="${tempType ==true }">
-				<c:out value="${weather.high }C    ${weather.low }C" />
+
+				<c:out value="${weather.highFtoC(weather.high) }C    ${weather.lowFtoC(weather.low)}C" />
 				</c:if>
 			</div>
 			<div>
 				<c:out value="high     low" />
+				<c:out value="${weather.forecastMessage(weather.forecast)}"/>
 			</div>
 			</div>
 			<c:url var="imgurl"

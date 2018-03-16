@@ -42,6 +42,12 @@ public class JdbcSurveyDao implements com.techelevator.npgeek.DAOs.SurveyDao{
 		}
 		return survey;
 	}
+	@Override
+	public void addSurvey(Survey survey) {
+		String sqlAddSurvey = "INSERT INTO survey_result (parkcode,emailaddress,state,activitylevel) VALUES (?,?,?,?)";
+		jdbcTemplate.update(sqlAddSurvey, survey.getParkCode(), survey.getEmailAddress(),survey.getState(),survey.getActivityLevel());
+	}
+
 	
 
 	private Survey mapRowToSurvey(SqlRowSet row) {

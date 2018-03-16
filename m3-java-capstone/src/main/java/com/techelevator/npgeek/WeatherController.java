@@ -14,7 +14,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import com.techelevator.npgeek.DAOs.ParkDao;
 import com.techelevator.npgeek.DAOs.WeatherDao;
 import com.techelevator.npgeek.Objects.Park;
-import com.techelevator.npgeek.Objects.UserPreference;
 
 
 

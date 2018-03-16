@@ -9,4 +9,6 @@ public interface SurveyDao {
 	public Survey getSurveyByCode(int surveyId);
 	
 	public List<Survey> getAllSurveys();
+
+	void addSurvey(Survey survey);
 }

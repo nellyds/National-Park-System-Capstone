@@ -60,7 +60,7 @@ public class Weather {
 		return null;
 		}
 	
-	public String forecastMessage() {
+	public String forecastMessage(String forecast) {
 	    if(forecast.equals("snow")) {
 	        return "pack snowshoes";
 	    }
@@ -93,11 +93,11 @@ public class Weather {
 	
 public Double highFtoC(Integer high){
 		
-		return ((high.doubleValue()-32)*1.8);
+		return ((high.doubleValue()-32)/1.8);
 	
 	}
 	public Double lowFtoC(Integer low){
 		
-		return ((low.doubleValue()-32)*1.8);
+		return ((low.doubleValue()-32)/1.8);
 	}
 }

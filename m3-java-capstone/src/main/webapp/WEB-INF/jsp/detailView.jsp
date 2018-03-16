@@ -7,7 +7,14 @@
 <c:url var="imgurl" value="/img/parks/${park.toLowerCase(param.parkCode)}.jpg" />
 <img src="${imgurl}" />
 
-
+<c:out value="${park.parkName }" />
+<c:out value= "${park.acreage } acres" />
+<c:out value="${park.elevationInFeet }" />
+<c:out value="${park.numberOfCampSites }" />
+<c:out value="${park.yearFounded }" />
+<c:out value="${park.annualVisitorCount }" />
+<c:out value="${park.inspirationalQuote }" />
+<c:out value="${park.quoteSource }"/>
 
 <h2><c:out value="${param.parkCode }" /></h2>
 </div>

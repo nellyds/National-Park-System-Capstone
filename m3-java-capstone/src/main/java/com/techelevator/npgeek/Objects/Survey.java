@@ -7,6 +7,7 @@ private String parkCode;
 private String emailAddress;
 private String state;
 private String activityLevel;
+private Integer activityLevelAmount;
 public int getSurveyId() {
 	return surveyId;
 }
@@ -36,6 +37,12 @@ public String getActivityLevel() {
 }
 public void setActivityLevel(String activityLevel) {
 	this.activityLevel = activityLevel;
+}
+public Integer getActivityLevelAmount() {
+	return activityLevelAmount;
+}
+public void setActivityLevelAmount(Integer activityLevelAmount) {
+	this.activityLevelAmount = activityLevelAmount;
 }
 
 }

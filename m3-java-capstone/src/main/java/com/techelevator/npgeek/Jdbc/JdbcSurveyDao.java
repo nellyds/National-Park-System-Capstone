@@ -76,6 +76,17 @@ public class JdbcSurveyDao implements com.techelevator.npgeek.DAOs.SurveyDao{
 		return survey;
 	}
 
+	@Override
+	public List<Survey> getParksActivityLevel(String parkCode) {
+		List<Survey> activityLevelRank = new ArrayList<>();
+		String sqlActivityLevelRank = "SELECT * FROM survey_result";
+		SqlRowSet results = jdbcTemplate.queryForRowSet(sqlActivityLevelRank);
+		while(results.next()) {
+			activityLevelRank.add(mapRowToSurvey(results));
+		}
+		return activityLevelRank;
+	}
+
 	
 }
 

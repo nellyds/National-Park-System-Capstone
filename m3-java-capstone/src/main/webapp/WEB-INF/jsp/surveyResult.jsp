@@ -14,7 +14,7 @@
 <tr style="width: 25%">
 <td><a href="${parkDetailUrl }"><c:out value="${park.parkName }"/></a></td>
 <c:set var="favoritePark" value="${park.amountOfSurveys }" />
-<td class="bar"style= 'width: ${favoritePark}'></td>
+<td><div class="bar"style= "width: ${favoritePark}px;"></div></td>
 <td><c:out value="${park.amountOfSurveys }"></c:out></td>
 </tr>
 

@@ -13,4 +13,6 @@ public interface SurveyDao {
 
 	void addSurvey(Survey survey);
 	
+	public List<Survey> getParksActivityLevel(String parkCode);
+	
 }

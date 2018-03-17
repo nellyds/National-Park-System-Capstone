@@ -229,5 +229,8 @@ p{
 .bar{
 	height: 50px;
 	background-color: white;
-	width: ${park.amountOfSurveys}px;
+}
+
+td{
+	width:200px;
 }

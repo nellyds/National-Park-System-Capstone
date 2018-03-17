@@ -17,6 +17,12 @@
 <link href="${boot }" rel="/stylesheet">
 <script src="${jqs}"></script>
 <script src="${jq }"></script>
+<script type="text/javascript" src="fusioncharts/js/fusioncharts.js"></script>
+    <script type="text/javascript" src="fusioncharts/js/themes/fusioncharts.theme.fint.js"></script>
+    
+   	
+            	
+            	
 </head>
 <style>
 body{

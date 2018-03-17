@@ -11,10 +11,10 @@
 <c:param name="parkCode" value="${park.parkCode }" />
 </c:url>
 
-<tr>
+<tr style="width: 25%">
 <td><a href="${parkDetailUrl }"><c:out value="${park.parkName }"/></a></td>
-
-<td class="bar"style="width: ${park.amountOfSurveys }"></td>
+<c:set var="favoritePark" value="${park.amountOfSurveys }" />
+<td class="bar"style= 'width: ${favoritePark}'></td>
 <td><c:out value="${park.amountOfSurveys }"></c:out></td>
 </tr>
 
@@ -24,6 +24,12 @@
 </table>
 
 
+
+    <div id="chartContainer">FusionCharts XT will load here!</div>
+</body>
+
+</html>
+         
 
 
 

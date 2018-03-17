@@ -1,3 +1,5 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
 .title{
 	font-family: "Rammetto One";
 	color: white; 
@@ -227,4 +229,5 @@ p{
 .bar{
 	height: 50px;
 	background-color: white;
+	width: ${park.amountOfSurveys}px;
 }

@@ -24,8 +24,7 @@ import com.techelevator.npgeek.Objects.Park;
 	
 	@Autowired
 	ParkDao parkDao;
-	@Autowired
-	SurveyDao surveyDao;
+	
 
 	@RequestMapping(path="/",method=RequestMethod.GET)
 	public String displayAllParks(ModelMap modelHolder) {
@@ -39,7 +38,7 @@ import com.techelevator.npgeek.Objects.Park;
 	public String displayAddForm(@RequestParam String parkCode, ModelMap modelHolder) {
 	    modelHolder.put("fiveDayForecast", weatherDao.getWeatherForPark(parkCode));
 		modelHolder.put("park", parkDao.getParkByCode(parkCode));
-		modelHolder.put("parkActiveLevel", surveyDao);
+	
 	    	
 	    
 		return "detailView";

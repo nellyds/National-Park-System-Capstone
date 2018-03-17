@@ -13,7 +13,8 @@
 
 <tr>
 <td><a href="${parkDetailUrl }"><c:out value="${park.parkName }"/></a></td>
-<td class="bar"style="width: ${park.amountOfSurveys}%"></td>
+
+<td class="bar"style="width: ${park.amountOfSurveys }"></td>
 <td><c:out value="${park.amountOfSurveys }"></c:out></td>
 </tr>
 

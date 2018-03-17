@@ -12,6 +12,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.techelevator.npgeek.DAOs.ParkDao;
+import com.techelevator.npgeek.DAOs.SurveyDao;
 import com.techelevator.npgeek.DAOs.WeatherDao;
 import com.techelevator.npgeek.Objects.Park;
 
@@ -39,7 +40,6 @@ import com.techelevator.npgeek.Objects.Park;
 	public String displayAddForm(@RequestParam String parkCode, ModelMap modelHolder) {
 	    modelHolder.put("fiveDayForecast", weatherDao.getWeatherForPark(parkCode));
 		modelHolder.put("park", parkDao.getParkByCode(parkCode));
-		modelHolder.put("parkActiveLevel", surveyDao);
 	    	
 	    
 		return "detailView";

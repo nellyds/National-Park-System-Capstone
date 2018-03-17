@@ -1,5 +1,8 @@
 package com.techelevator.npgeek.Objects;
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
+
 public class Weather {
 	private String parkCode;
 	private Integer fiveDayForecastValue;
@@ -91,13 +94,13 @@ public class Weather {
 	    
 	}
 	
-public Double highFtoC(Integer high){
-		
-		return ((high.doubleValue()-32)/1.8);
+public BigDecimal highFtoC(Integer high){
+	BigDecimal newTemp = new BigDecimal((high-32)/1.8);
+	return newTemp.setScale(2,RoundingMode.CEILING);
 	
 	}
-	public Double lowFtoC(Integer low){
-		
-		return ((low.doubleValue()-32)/1.8);
+	public BigDecimal lowFtoC(Integer low){
+		BigDecimal newTemp = new BigDecimal((low-32)/1.8);
+		return newTemp.setScale(2,RoundingMode.CEILING);
 	}
 }

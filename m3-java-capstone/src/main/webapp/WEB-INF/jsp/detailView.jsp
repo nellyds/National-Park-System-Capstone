@@ -21,16 +21,16 @@
 					<c:out value="${park.acreage } acres" />
 				</p>
 				<p>
-					<c:out value="${park.elevationInFeet }" />
+					<c:out value="Elevation above Sea Level: ${park.elevationInFeet } feet" />
 				</p>
 				<p>
-					<c:out value="${park.numberOfCampSites }" />
+					<c:out value="Number of CampSites: ${park.numberOfCampSites }" />
 				<p>
 				<p>
-					<c:out value="${park.yearFounded }" />
+					<c:out value="Founded: ${park.yearFounded }" />
 				<p>
 				<p>
-					<c:out value="${park.annualVisitorCount }" />
+					<c:out value="Annual Visitors: ${park.annualVisitorCount }" />
 				</p>
 				<div class="underline_three"></div>
 				<p>

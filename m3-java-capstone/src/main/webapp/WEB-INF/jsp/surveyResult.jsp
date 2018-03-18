@@ -12,10 +12,11 @@
 </c:url>
 
 <tr style="width: 25%">
-<td><a href="${parkDetailUrl }"><c:out value="${park.parkName }"/></a></td>
+<td class="tableData"><a href="${parkDetailUrl }"><c:out value="${park.parkName }"/></a></td>
 <c:set var="favoritePark" value="${park.amountOfSurveys }" />
-<td><div class="bar"style= "width: ${favoritePark}px;"></div></td>
-<td><c:out value="${park.amountOfSurveys }"></c:out></td>
+<td><div class="bar" style= "width: ${favoritePark}px;"></div>
+
+</td>
 </tr>
 
 
@@ -23,30 +24,6 @@
 
 </table>
 
-
-
-    <div id="chartContainer">FusionCharts XT will load here!</div>
-</body>
-
-</html>
-         
-
-
-
-
-
-
-
-</div>
-
-
-
-
-
-
-</div>
-
-    
 
 <c:import url="/WEB-INF/jsp/common/footer.jsp" />
 

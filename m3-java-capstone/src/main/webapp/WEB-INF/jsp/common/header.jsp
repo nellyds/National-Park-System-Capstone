@@ -33,6 +33,8 @@ background-attachment: fixed;
     background-size: cover;
 
 }
+
+
 </style>
 <body>
 <div class="Header">

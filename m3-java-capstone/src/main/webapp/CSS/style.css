@@ -1,4 +1,11 @@
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+@mixin stagger-anim-delay($i, $initial-delay, $stagger-delay) {
+  @while $i > 0 {
+    &:nth-of-type(#{$i}) {
+      animation-delay: $initial-delay + $stagger-delay * $i;
+    }
+    $i: $i - 1;
+  }
+}
 
 .title{
 	font-family: "Rammetto One";
@@ -229,14 +236,22 @@ p{
 .bar{
 	height: 50px;
 	background-color: white;
-	opacity: .8;
+	opacity: 1;
 }
 
 .bar:hover{
-	opacity: 1;
+	opacity: .5;
 	transition: width 2s;
+	width: ${park.amountOfSurveys};
+
+}
+table{
+	margin: auto;
 }
 
 td{
 	width:200px;
+}
+.tableData{
+	text-align: right;
 }
